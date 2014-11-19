@@ -13,6 +13,9 @@
 		DE4047661A1C606800ABEB84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE4047651A1C606800ABEB84 /* Images.xcassets */; };
 		DE4047691A1C606800ABEB84 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4047671A1C606800ABEB84 /* LaunchScreen.xib */; };
 		DE4047751A1C606800ABEB84 /* atomikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4047741A1C606800ABEB84 /* atomikTests.swift */; };
+		DE4047801A1C87CC00ABEB84 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DE40477F1A1C87CC00ABEB84 /* Settings.bundle */; };
+		DE4047831A1C8D7D00ABEB84 /* EAIntroView.license in Resources */ = {isa = PBXBuildFile; fileRef = DE4047821A1C8D7D00ABEB84 /* EAIntroView.license */; };
+		DEC4F7271A1C906100869D0C /* licenseScript.py in Resources */ = {isa = PBXBuildFile; fileRef = DEC4F7261A1C906100869D0C /* licenseScript.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		DE40476E1A1C606800ABEB84 /* atomikTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = atomikTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4047731A1C606800ABEB84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE4047741A1C606800ABEB84 /* atomikTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atomikTests.swift; sourceTree = "<group>"; };
+		DE40477F1A1C87CC00ABEB84 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
+		DE4047821A1C8D7D00ABEB84 /* EAIntroView.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EAIntroView.license; sourceTree = "<group>"; };
+		DEC4F7261A1C906100869D0C /* licenseScript.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = licenseScript.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 				DE40475B1A1C606800ABEB84 /* atomik */,
 				DE4047711A1C606800ABEB84 /* atomikTests */,
 				DE40475A1A1C606800ABEB84 /* Products */,
+				DE40477E1A1C879D00ABEB84 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +117,25 @@
 				DE4047731A1C606800ABEB84 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE40477E1A1C879D00ABEB84 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DE4047811A1C8A3600ABEB84 /* Licenses */,
+				DE40477F1A1C87CC00ABEB84 /* Settings.bundle */,
+			);
+			name = Resources;
+			path = atomik;
+			sourceTree = "<group>";
+		};
+		DE4047811A1C8A3600ABEB84 /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				DE4047821A1C8D7D00ABEB84 /* EAIntroView.license */,
+				DEC4F7261A1C906100869D0C /* licenseScript.py */,
+			);
+			name = Licenses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,8 +218,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE4047801A1C87CC00ABEB84 /* Settings.bundle in Resources */,
 				DE4047641A1C606800ABEB84 /* Main.storyboard in Resources */,
+				DEC4F7271A1C906100869D0C /* licenseScript.py in Resources */,
 				DE4047691A1C606800ABEB84 /* LaunchScreen.xib in Resources */,
+				DE4047831A1C8D7D00ABEB84 /* EAIntroView.license in Resources */,
 				DE4047661A1C606800ABEB84 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +436,7 @@
 				DE40477A1A1C606800ABEB84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE40477B1A1C606800ABEB84 /* Build configuration list for PBXNativeTarget "atomikTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +445,7 @@
 				DE40477D1A1C606800ABEB84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
