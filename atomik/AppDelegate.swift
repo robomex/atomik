@@ -19,13 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         Parse.setApplicationId("1WFDJV7u1za9Wu27qgHU3J8lIFwCniE4CZXQ70py", clientKey: "Shyu4WD1eQqXHkTh4hGbTAmQLD25rnDMmh5bfPm4")
         PFFacebookUtils.initializeFacebook()
-
-    
-        
         
 //        [Parse setApplicationId:@"1WFDJV7u1za9Wu27qgHU3J8lIFwCniE4CZXQ70py"
 //        clientKey:@"Shyu4WD1eQqXHkTh4hGbTAmQLD25rnDMmh5bfPm4"];
 //        
+
+        
+// commenting these out to see if needed, due to using wrong plist
+//        FBLoginView.self
+//        FBProfilePictureView.self
         
         return true
     }
