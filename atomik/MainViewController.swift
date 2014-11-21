@@ -8,16 +8,28 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, FBLoginViewDelegate {
     
     
 
-//    @IBOutlet weak var fbLoginView: FBLoginView!
 
+    @IBOutlet weak var fbLoginView: FBLoginView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        fbLoginView.delegate = self
+        fbLoginView.readPermissions = ["public_profile", "email", "user_friends", "user_likes"]
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    func loginViewShowingLoggedInUser(loginView: FBLoginView!) {
         
         var permissions = ["public_profile", "email", "user_friends", "user_likes"]
         
@@ -31,40 +43,20 @@ class MainViewController: UIViewController {
                 NSLog("User logged in through Facebook!")
             }
         })
-        
+    }
+    
+    func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser!) {
         
     }
 
-    
-// commenting these out to see if needed, due to using wrong plist
-    // Facebook Delegate Methods
-//    
-//    func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
-//        println("User Logged In")
-//    }
-//    
-//    func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
-//        println("User: \(user)")
-//        println("User ID: \(user.objectID)")
-//        println("User Name: \(user.name)")
-//        var userEmail = user.objectForKey("email") as String
-//        println("User Email: \(userEmail)")
-//    }
-//    
-//    func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
-//        println("User Logged Out")
-//    }
-//    
-//    func loginView(loginView : FBLoginView!, handleError:NSError) {
-//        println("Error: \(handleError.localizedDescription)")
-//    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func loginViewShowingLoggedOutUser(loginView: FBLoginView!) {
+        
     }
-
-
+    
+    func loginView(loginView: FBLoginView!, handleError error: NSError!) {
+        
+    }
+    
+    
 }
 

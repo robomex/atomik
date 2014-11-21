@@ -25,10 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        
 
         
-// commenting these out to see if needed, due to using wrong plist
-//        FBLoginView.self
-//        FBProfilePictureView.self
-        
         return true
     }
 
